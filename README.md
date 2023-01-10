@@ -20,8 +20,8 @@ nas添加每小时一次的计划任务，运行命令为 /root/test/oss-backup.
 ## 设置rclone
 rclone config 选择n新建一个配置，前面备份在哪里，这个配置就指向哪里，比如我加了一个名为aliyun的配置
 ## 拉取备份包
-rclone sync aliyun:topkee-oss-buckup-hk2/topkee-oss-buckup-hk2/hk1   /mnt/PoolNS/savegz/
-备份包在topkee-oss-buckup-hk2存储桶的/topkee-oss-buckup-hk2/hk1路径下
+rclone sync aliyun:bucket_name/bucket_name/hk1   /mnt/PoolNS/savegz/
+备份包在bucket_name存储桶的/bucket_name/hk1路径下
 备份包会被拉取到 /mnt/PoolNS/savegz/ 数据集里
 ## 拷贝脚本
 将oss-recover.sh拷贝到要备份的机器里，一般用ssh
